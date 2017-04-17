@@ -16,14 +16,13 @@ namespace SpinzUI {
 
         public frmLogin() {
             InitializeComponent();
-            connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Ian\documents\visual studio 2015\Projects\SpinzMultiSystem\SpinzUI\SpinzAccounts.mdf;Integrated Security=True";
+            connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Ian\documents\GitHub\SpinzMultiSystem\SpinzUI\SpinzAccounts.mdf;Integrated Security=True";
 
         }
 
         private void lblRegister_Click(object sender, EventArgs e) {
             frmRegister regForm = new frmRegister();
             regForm.Show();
-
         }
 
         private void btnEnter_Click(object sender, EventArgs e) {
@@ -41,7 +40,6 @@ namespace SpinzUI {
                 else {
                     MessageBox.Show("NO RECORD OF USER DETECTED");
                 }
-
             }
         }
     }

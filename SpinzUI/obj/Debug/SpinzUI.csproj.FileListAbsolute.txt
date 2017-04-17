@@ -10,3 +10,16 @@ C:\Users\Ian\documents\visual studio 2015\Projects\SpinzMultiSystem\SpinzUI\obj\
 C:\Users\Ian\documents\visual studio 2015\Projects\SpinzMultiSystem\SpinzUI\obj\Debug\SpinzUI.pdb
 C:\Users\Ian\documents\visual studio 2015\Projects\SpinzMultiSystem\SpinzUI\bin\Debug\SpinzAccounts.mdf
 C:\Users\Ian\documents\visual studio 2015\Projects\SpinzMultiSystem\SpinzUI\bin\Debug\SpinzAccounts_log.ldf
+C:\Users\Ian\Documents\GitHub\SpinzMultiSystem\SpinzUI\bin\Debug\SpinzUI.exe.config
+C:\Users\Ian\Documents\GitHub\SpinzMultiSystem\SpinzUI\obj\Debug\SpinzUI.exe
+C:\Users\Ian\Documents\GitHub\SpinzMultiSystem\SpinzUI\obj\Debug\SpinzUI.pdb
+C:\Users\Ian\Documents\GitHub\SpinzMultiSystem\SpinzUI\bin\Debug\SpinzAccounts.mdf
+C:\Users\Ian\Documents\GitHub\SpinzMultiSystem\SpinzUI\bin\Debug\SpinzAccounts_log.ldf
+C:\Users\Ian\Documents\GitHub\SpinzMultiSystem\SpinzUI\bin\Debug\SpinzUI.exe
+C:\Users\Ian\Documents\GitHub\SpinzMultiSystem\SpinzUI\bin\Debug\SpinzUI.pdb
+C:\Users\Ian\Documents\GitHub\SpinzMultiSystem\SpinzUI\obj\Debug\SpinzUI.csprojResolveAssemblyReference.cache
+C:\Users\Ian\Documents\GitHub\SpinzMultiSystem\SpinzUI\obj\Debug\SpinzUI.frmLogin.resources
+C:\Users\Ian\Documents\GitHub\SpinzMultiSystem\SpinzUI\obj\Debug\SpinzUI.frmRegister.resources
+C:\Users\Ian\Documents\GitHub\SpinzMultiSystem\SpinzUI\obj\Debug\SpinzUI.Properties.Resources.resources
+C:\Users\Ian\Documents\GitHub\SpinzMultiSystem\SpinzUI\obj\Debug\SpinzUI.csproj.GenerateResource.Cache
+C:\Users\Ian\Documents\GitHub\SpinzMultiSystem\SpinzUI\obj\Debug\SpinzUI.frmAccountsTable.resources

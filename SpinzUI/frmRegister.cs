@@ -17,7 +17,7 @@ namespace SpinzUI {
 
         public frmRegister() {
             InitializeComponent();
-            connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Ian\documents\visual studio 2015\Projects\SpinzMultiSystem\SpinzUI\SpinzAccounts.mdf;Integrated Security=True";
+            connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Ian\documents\GitHub\SpinzMultiSystem\SpinzUI\SpinzAccounts.mdf;Integrated Security=True";
         }
 
         private void label5_Click(object sender, EventArgs e) {
@@ -47,6 +47,12 @@ namespace SpinzUI {
                 }
                 
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e) {
+            frmAccountsTable acct = new frmAccountsTable();
+            acct.Show();
+            this.Dispose();
         }
     }
 }
