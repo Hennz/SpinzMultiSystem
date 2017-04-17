@@ -7,4 +7,3 @@ Spinzmultisystem project is a system dedicated for the SPINZ LAUNDRY company. Th
     - attendance system
 
 Repository was created 9:25PM 4/17/2017
-# SpinzMultiSystem
