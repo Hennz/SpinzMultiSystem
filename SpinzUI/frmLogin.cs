@@ -8,15 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
+using MySql.Data;
+
 
 namespace SpinzUI {
     public partial class frmLogin : Form {
-        SqlConnection conn; 
+        MySqlConnection conn; 
         string connectionString;
 
         public frmLogin() {
             InitializeComponent();
-            connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Ian\documents\GitHub\SpinzMultiSystem\SpinzUI\SpinzAccounts.mdf;Integrated Security=True";
+            connectionString = "datasource=localhost; port=3306;username=root;password=admin";
 
         }
 
@@ -26,12 +29,12 @@ namespace SpinzUI {
         }
 
         private void btnEnter_Click(object sender, EventArgs e) {
-            string query = "SELECT Username, Password from Account WHERE Username = '" + txtUsername.Text + "' AND " +
+            string query = "SELECT Username, Password from `database`.Account WHERE Username = '" + txtUsername.Text + "' AND " +
                 " Password = '" + txtPassword.Text + "'";
 
-            using (conn = new SqlConnection(connectionString))
-            using (SqlCommand cmd = new SqlCommand(query, conn)) 
-            using (SqlDataAdapter da = new SqlDataAdapter(query,conn)){
+            using (conn = new MySqlConnection(connectionString))
+            using (MySqlCommand cmd = new MySqlCommand(query, conn)) 
+            using (MySqlDataAdapter da = new MySqlDataAdapter(query,conn)){
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 if(dt.Rows.Count > 0) {

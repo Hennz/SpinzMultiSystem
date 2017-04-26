@@ -8,16 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
+using MySql.Data;
 
 namespace SpinzUI {
     public partial class frmRegister : Form {
-        SqlConnection connection;
+        MySqlConnection connection;
         string connectionString;
 
 
         public frmRegister() {
             InitializeComponent();
-            connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Ian\documents\GitHub\SpinzMultiSystem\SpinzUI\SpinzAccounts.mdf;Integrated Security=True";
+            connectionString = "datasource = localhost; port = 3306; username = root; password = admin";
         }
 
         private void label5_Click(object sender, EventArgs e) {
@@ -25,13 +27,13 @@ namespace SpinzUI {
         }
 
         private void btnConfirm_Click(object sender, EventArgs e) {
-            string query = "INSERT INTO Account VALUES (@Name, @Username, @Password)";
-            string checkquery = "SELECT Username, Password FROM Account WHERE Username ='" + txtUsername.Text + "'";
+            string query = "INSERT INTO `database`.Account VALUES (@id,@FirstName, @LastName, @UserName, @Password)";
+            string checkquery = "SELECT Username, Password FROM `database`.Account WHERE Username ='" + txtUsername.Text + "'";
 
-            using (connection = new SqlConnection(connectionString))
-            using (SqlCommand command = new SqlCommand(query, connection))
-            using (SqlDataAdapter da = new SqlDataAdapter(checkquery, connection)) {
-                connection.Open();
+            using (connection = new MySqlConnection(connectionString))
+            using (MySqlCommand command = new MySqlCommand(query, connection))
+            using (MySqlDataAdapter da = new MySqlDataAdapter(checkquery, connection)) {
+                
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 if (dt.Rows.Count > 0) {
@@ -39,13 +41,22 @@ namespace SpinzUI {
                 }
                 else {
                     MessageBox.Show("USER ADDED");
-                    command.Parameters.AddWithValue("@Name", txtName.Text);
-                    command.Parameters.AddWithValue("@Username", txtUsername.Text);
-                    command.Parameters.AddWithValue("@Password", txtPassword.Text);
+                    command.Parameters.Add("@id", MySqlDbType.Int32).Value = 3;
+                    command.Parameters.Add("@FirstName", MySqlDbType.VarChar).Value = txtFname.Text;
+                    command.Parameters.Add("@LastName", MySqlDbType.VarChar).Value = txtLname.Text;
+                    command.Parameters.Add("@Username", MySqlDbType.VarChar).Value = txtUsername.Text;
+                    command.Parameters.Add("@Password", MySqlDbType.VarChar).Value = txtPassword.Text;
+
                     
-                    command.ExecuteScalar();
                 }
+                connection.Open();
+
                 
+                command.ExecuteNonQuery();
+                Console.Write("Error!");
+                
+                
+
             }
         }
 
