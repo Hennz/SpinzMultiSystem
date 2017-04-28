@@ -102,6 +102,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLFunctions.cs" />
     <EmbeddedResource Include="frmAccountsTable.resx">
       <DependentUpon>frmAccountsTable.cs</DependentUpon>
     </EmbeddedResource>
