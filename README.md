@@ -1,6 +1,6 @@
 SPINZMULTISYSTEM
 ================
-<p>Spinzmultisystem project is a system dedicated for the <B>SPINZ LAUNDRY</B> company. The system includes a:</p>
+<p>Spinzmultisystem project is a system developed for the <B>SPINZ LAUNDRY</B> company. </p>
  * payroll system
  * POS system
  * inventory system
@@ -11,7 +11,7 @@ SPINZMULTISYSTEM
 > * with POS, Payroll, and Inventory system
 > * with enabled QR scanner, capable of printing receipts
 > * Layout for Customer Cards
-> <br>
+> 
 > ### Payroll details:
 >  * Attendance
 >  * in/out
