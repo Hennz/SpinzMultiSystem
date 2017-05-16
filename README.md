@@ -1,10 +1,6 @@
 SPINZMULTISYSTEM
 ================
 <p>Spinzmultisystem project is a system developed for the <B>SPINZ LAUNDRY</B> company. </p>
- * payroll system
- * POS system
- * inventory system
- * attendance system
 
 > ## System features:
 > * Bunifu framework inspired UI
